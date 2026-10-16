@@ -1,0 +1,11 @@
+TaxiMeterCore 0.8.11 — partial-GPS fare estimate and 1,000-toman rounding
+
+- Always apply the configured minimum/base fare before rounding calculated fares.
+- Round calculated fare estimates to the nearest 1,000 toman (half-up).
+- If GPS coverage is incomplete, calculate an estimate from allocated/valid GPS distance rather than discarding the estimate.
+- Keep the trip marked for review when a GPS gap exists; the unknown distance is not fabricated or charged as known distance.
+- Show the valid recorded distance and GPS-derived estimate in the review dialog, allowing the driver to confirm or adjust it.
+- Preserve the GPS-derived estimate and record manual changes through the existing adjustment/audit trail.
+- Update fare-calculation unit tests for the new rounding and partial-GPS behavior.
+
+Build status: source/archive validation only; no Android APK build or Android 6 device test was run in this environment.

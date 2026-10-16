@@ -1,0 +1,12 @@
+TaxiMeterCore 0.8.12
+
+- Added persistent settings for merchant/acceptor code and QR/payment payload format.
+- Added a dedicated payment configuration editor under Management Shift & Tariff.
+- Settings are saved locally on the device using Android SharedPreferences; no Room schema migration is required.
+- The stored format is not yet treated as a verified payment protocol and does not itself initiate or confirm payments.
+- Changed fare rounding from nearest thousand to flooring to the lower 1,000-toman boundary.
+- Preserved minimum fare by rounding the configured minimum UP to the next 1,000-toman boundary when necessary.
+- Updated fare calculator tests for downward rounding and partial-GPS estimates.
+- Android minSdk remains 23 (Android 6).
+
+Validation note: source archive and static references are checked. A full Android/Gradle build and device test were not run in this environment.
