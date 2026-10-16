@@ -267,7 +267,7 @@ class MainActivity : ComponentActivity() {
                     textSize = 17f
                     layoutDirection = View.LAYOUT_DIRECTION_LTR
                     gravity = Gravity.START
-                    singleLine = true
+                    setSingleLine(true)
                 }
                 val formatInput = EditText(this).apply {
                     hint = "فرمت / قالب QR یا رشته پرداخت"
